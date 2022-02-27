@@ -24,14 +24,14 @@ body {
 main {
   display: grid;
   place-items: center;
-  gap: 1rem;
+  gap: 3.5rem;
 }
 
 .user-card {
   margin-top: 3rem;
   box-sizing: border-box;
   background-color: var(--clr-dark-blue);
-  width: calc(100% - 3rem);
+  width: min(100% - 3rem, 40rem);
   border-radius: 1rem;
 }
 .user-card .user-header {
@@ -61,19 +61,46 @@ main {
 .user-card .time-frame {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem;
   color: var(--clr-desaturated-blue);
+}
+.user-card .time-frame .active-time-frame {
+  color: white;
+}
+.user-card .time-frame a:hover {
+  color: white;
+  cursor: pointer;
 }
 
 .card {
   box-sizing: border-box;
   background-color: var(--clr-dark-blue);
-  width: calc(100% - 3rem);
+  width: min(100% - 3rem, 40rem);
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  position: relative;
+}
+.card:active {
+  background-color: #34397f;
+  cursor: pointer;
+}
+.card:last-of-type {
+  margin-bottom: 3rem;
+}
+.card::before {
+  content: "";
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: -2rem;
+  z-index: -5;
+  background-color: red;
+  border-radius: 1rem;
+  background-position: right 1rem top -0.8rem;
+  background-repeat: no-repeat;
 }
 .card h2 {
   font-size: 18px;
@@ -82,6 +109,10 @@ main {
 }
 .card img {
   justify-self: end;
+  cursor: pointer;
+}
+.card img:hover {
+  filter: brightness(0) invert(1);
 }
 .card p {
   margin: 0;
@@ -95,6 +126,38 @@ main {
   justify-self: end;
   font-size: 1rem;
   color: var(--clr-pale-blue);
+}
+
+.work::before {
+  background-color: var(--clr-work);
+  background-position: right 1rem top -0.8rem;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon-work.svg);
+}
+
+.play::before {
+  background-color: var(--clr-play);
+  background-image: url(../images/icon-play.svg);
+}
+
+.study::before {
+  background-color: var(--clr-study);
+  background-image: url(../images/icon-study.svg);
+}
+
+.exercise::before {
+  background-color: var(--clr-exercise);
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.social::before {
+  background-color: var(--clr-social);
+  background-image: url(../images/icon-social.svg);
+}
+
+.self-care::before {
+  background-color: var(--clr-self-care);
+  background-image: url(../images/icon-self-care.svg);
 }
 
 .attribution {

@@ -27,7 +27,7 @@ body {
 main {
   display: grid;
   place-items: center;
-  gap: 1rem;
+  gap: 3.5rem;
 }
 
 .user-card {
@@ -56,28 +56,57 @@ main {
 
     }
   }
+  // .user-card styles
   margin-top: 3rem;
   box-sizing: border-box;
   background-color: var(--clr-dark-blue);
-  width: calc(100% - 3rem);
+  width: min(100% - 3rem, 40rem);
   border-radius: 1rem;
   & .time-frame {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     color: var(--clr-desaturated-blue);
+    .active-time-frame { // toggle this with state
+      color: white;
+    }
+    a:hover {
+      color: white;
+      cursor: pointer;
+    }
   }
 }
 
 .card {
   box-sizing: border-box;
   background-color: var(--clr-dark-blue);
-  width: calc(100% - 3rem);
+  width: min(100% - 3rem, 40rem);
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  position: relative;
+  &:active { // change card's color on click
+    background-color: hsl(236, 42%, 35%);
+    cursor: pointer;
+  }
+  &:last-of-type { // last card
+    margin-bottom: 3rem;
+  }
+  &::before { // card's top tab
+    content: '';
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: -2rem;
+    z-index: -5;
+    background-color: red; // color will be overridden
+    border-radius: 1rem;
+    // background image styling
+    background-position: right 1rem top -.8rem;
+    background-repeat: no-repeat;
+  }
   h2 {
     font-size: 18px;
     font-weight: 500;
@@ -85,6 +114,10 @@ main {
   }
   img {
     justify-self: end;
+    cursor: pointer;
+    &:hover {
+      filter:  brightness(0) invert(1); // turns img white on hover
+    }
   }
   p {
     margin: 0;
@@ -100,6 +133,38 @@ main {
     color: var(--clr-pale-blue);
   }
 
+}
+
+.work::before {
+  background-color: var(--clr-work);
+  background-position: right 1rem top -.8rem;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon-work.svg);
+}
+
+.play::before {
+  background-color: var(--clr-play);
+  background-image: url(../images/icon-play.svg);
+}
+
+.study::before {
+  background-color: var(--clr-study);
+  background-image: url(../images/icon-study.svg);
+}
+
+.exercise::before {
+  background-color: var(--clr-exercise);
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.social::before {
+  background-color: var(--clr-social);
+  background-image: url(../images/icon-social.svg);
+}
+
+.self-care::before {
+  background-color: var(--clr-self-care);
+  background-image: url(../images/icon-self-care.svg);
 }
 
 .attribution {
