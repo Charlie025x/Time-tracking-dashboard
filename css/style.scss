@@ -18,8 +18,88 @@
 
 body {
   margin: 0;
+  background-color: var(--clr-very-dark-blue);
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
+  color: white;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.user-card {
+  & .user-header {
+    box-sizing: border-box;
+    background-color: var(--clr-blue);
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    img {
+      width: 3rem;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-right: .5rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 300;
+      a {
+        display: block;
+        font-size: 1.5rem;
+      }
+
+    }
+  }
+  margin-top: 3rem;
+  box-sizing: border-box;
+  background-color: var(--clr-dark-blue);
+  width: calc(100% - 3rem);
+  border-radius: 1rem;
+  & .time-frame {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--clr-desaturated-blue);
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: var(--clr-dark-blue);
+  width: calc(100% - 3rem);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  img {
+    justify-self: end;
+  }
+  p {
+    margin: 0;
+    margin-top: .5rem;
+    font-weight: 300;
+  }
+  .current-hours {
+    font-size: 2rem;
+  }
+  .previous-hours {
+    justify-self: end;
+    font-size: 1rem;
+    color: var(--clr-pale-blue);
+  }
+
 }
 
 .attribution {
