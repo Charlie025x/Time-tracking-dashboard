@@ -84,7 +84,7 @@ main {
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr .3fr; // .3 fr because 3 dots img doesn't need much space
   align-items: center;
   position: relative;
   &:active { // change card's color on click
@@ -171,5 +171,82 @@ main {
   font-size: 11px; text-align: center;
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  body { // center content
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: calc(100% - 10rem);
+    width: 70rem;
+    width: min(100% - 10rem, 70rem);
+    height: 60vh;
+  }
+
+  .user-card, .card {
+    width: 100%;
+  }
+
+  .user-card {
+    margin-top: 0;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+    .user-header {
+      height: 70%;
+      flex-direction: column;
+      align-items: start;
+      img {
+        margin-bottom: 2rem;
+        width: 4rem;
+      }
+        h1 a {
+          font-size: 2.5rem;
+        }
+    }
+    .time-frame {
+      box-sizing: border-box;
+      flex-direction: column;
+      // justify-content: space-between;
+      // align-content: space-between;
+      font-weight: 300;
+      height: 30%;
+    }
+  }
+
+  .card {
+    height: calc(100% - 2rem);
+    padding: 1rem;
+    margin-top: 2rem; // fixes misalignment caused by card's top tab
+    h2 {
+      font-size: .9rem;
+    }
+    .current-hours, .previous-hours {
+      grid-column: span 2;
+    }
+    .current-hours {
+      font-size: 3rem;
+    }
+    .previous-hours {
+      justify-self: start;
+      font-size: .9rem;
+    }
+    &:last-of-type { // last card
+      margin-bottom: 0;
+    }
+  }
+  
+  .attribution {
+    margin-top: 1rem;
   }
 }

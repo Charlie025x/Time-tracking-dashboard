@@ -79,7 +79,7 @@ main {
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.3fr;
   align-items: center;
   position: relative;
 }
@@ -166,5 +166,79 @@ main {
 }
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: calc(100% - 10rem);
+    width: 70rem;
+    width: min(100% - 10rem, 70rem);
+    height: 60vh;
+  }
+
+  .user-card, .card {
+    width: 100%;
+  }
+
+  .user-card {
+    margin-top: 0;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+  }
+  .user-card .user-header {
+    height: 70%;
+    flex-direction: column;
+    align-items: start;
+  }
+  .user-card .user-header img {
+    margin-bottom: 2rem;
+    width: 4rem;
+  }
+  .user-card .user-header h1 a {
+    font-size: 2.5rem;
+  }
+  .user-card .time-frame {
+    box-sizing: border-box;
+    flex-direction: column;
+    font-weight: 300;
+    height: 30%;
+  }
+
+  .card {
+    height: calc(100% - 2rem);
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  .card h2 {
+    font-size: 0.9rem;
+  }
+  .card .current-hours, .card .previous-hours {
+    grid-column: span 2;
+  }
+  .card .current-hours {
+    font-size: 3rem;
+  }
+  .card .previous-hours {
+    justify-self: start;
+    font-size: 0.9rem;
+  }
+  .card:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .attribution {
+    margin-top: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
