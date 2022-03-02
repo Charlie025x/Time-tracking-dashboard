@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <main>
+  <main data-cards-container>
     <div class="user-card">
       <div class="user-header">
         <img src="./images/image-jeremy.png" alt="">
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="card work">
+    <!-- <div class="card work">
 
       <h2>Work</h2>
       <img src="./images/icon-ellipsis.svg" alt="">
@@ -94,14 +94,27 @@
       <p class="previous-hours">
         Previous - 2hrs
       </p>
-    </div>
+    </div> -->
 
   </main>
 
+  <template data-card-template>
+    <div class="card self-care">
+      <h2 data-card-title >Self Care</h2>
+      <img src="./images/icon-ellipsis.svg" alt="">
+      <p data-current-hours class="current-hours">
+        <!-- 2hrs fill w/ json data -->
+      </p>
+      <p class="previous-hours">
+        Previous - 2hrs
+      </p>
+    </div>
+  </template>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://charlie-alonso.netlify.app/" target="_blank" rel="noopener noreferrer">Charlie Alonso</a>.
   </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
