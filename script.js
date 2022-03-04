@@ -1,4 +1,3 @@
-const currentHours = [...document.querySelectorAll('current-hours')]
 const cardContainer = document.querySelector("[data-cards-container]")
 const cardTemplate = document.querySelector("[data-card-template]")
 
@@ -7,13 +6,23 @@ const cardTemplate = document.querySelector("[data-card-template]")
 fetch("data.json")
   .then(response => response.json())
   .then(data => {
-    data.map(cardCategory => {
+    data.map(cardData => {
+      // Select card-template
       const card = cardTemplate.content.cloneNode(true).children[0]
+
+      // Selectors within card-template
+      const cardCategory = card.querySelector("[data-card-category]") // for some reason this selector doesn't work
       const cardTitle = card.querySelector("[data-card-title]")
-      const currrentHours = card.querySelector("[data-current-hours]") // returns numbers instead of strings, resulting in no number rending
-      cardTitle.textContent = cardCategory.title
-      currentHours.textContent = cardCategory.timeframes.weekly.current
-      cardContainer.append(card) // fill html's card container with template cards
-      console.log(cardCategory.timeframes.weekly.current) // TODO: turn these numbers into strings
+      const currentHours = card.querySelector("[data-current-hours]")
+      const previousHours = card.querySelector("[data-previous-hours]")
+      
+      // manipulating DOM w/ data.json
+      cardTitle.parentElement.classList.add(cardData.title.replace(/\s+/g, '-').toLowerCase()) // adds class names for tab styles, via data.json, replaces " " for "-" and lower cases the class names
+      cardTitle.textContent = cardData.title
+      currentHours.textContent = `${cardData.timeframes.weekly.current}hrs` // TODO: add state
+      previousHours.textContent = `Last Week - ${cardData.timeframes.weekly.previous}hrs` // TODO: add state
+
+      // fill html's card container with template cards
+      cardContainer.append(card)
     })
   });
