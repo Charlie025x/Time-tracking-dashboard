@@ -31,7 +31,7 @@ main {
 }
 
 .user-card {
-  & .user-header {
+  .user-header {
     box-sizing: border-box;
     background-color: var(--clr-blue);
     width: 100%;
@@ -62,9 +62,10 @@ main {
   background-color: var(--clr-dark-blue);
   width: min(100% - 3rem, 40rem);
   border-radius: 1rem;
-  & .time-frame {
+  .time-frame {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start; // keeps the timeframes from scretching horizontaly in desktop view thus improving the click listener 
     padding: 1rem;
     color: var(--clr-desaturated-blue);
     .active-time-frame { // toggle this with state

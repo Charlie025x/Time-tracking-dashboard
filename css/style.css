@@ -61,6 +61,7 @@ main {
 .user-card .time-frame {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 1rem;
   color: var(--clr-desaturated-blue);
 }

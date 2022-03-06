@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector("[data-cards-container]")
+const timeFrames = [...document.querySelector("[data-time-frame]").children] // turns htmlCollection into an array using es6 spread operator
 const cardTemplate = document.querySelector("[data-card-template]")
-
 // Get json data
 
 fetch("data.json")
@@ -26,3 +26,11 @@ fetch("data.json")
       cardContainer.append(card)
     })
   });
+
+  console.log(timeFrames)
+
+// looping though the time frames
+timeFrames.forEach(timeFrame => console.log(timeFrame))
+timeFrames.forEach(timeFrame => timeFrame.addEventListener("click", e = () => {
+  console.log("I was clicked")
+}))
