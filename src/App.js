@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import userImg from './images/image-jeremy.png'
+import iconEllipsis from './images/icon-ellipsis.svg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <main data-cards-container>
+    <div class="user-card">
+      <div class="user-header">
+        <img src={userImg} alt=""/>
+        <h1>
+          Report for
+          <a>Jeremy Robson</a>
+        </h1>
+      </div>
+      <div data-time-frame class="time-frame">
+        <a>Daily</a>
+        <a class="active-time-frame">Weekly</a>
+        <a>Monthly</a>
+      </div>
     </div>
+
+    <div class="card work">
+      <h2>Work</h2>
+      <img src={iconEllipsis} alt=""/>
+      <p class="current-hours">
+        32hrs
+      </p>
+      <p class="previous-hours">
+        Previous - 36hrs
+      </p>
+    </div>
+
+  </main>
   );
 }
 
