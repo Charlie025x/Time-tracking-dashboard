@@ -1,85 +1,70 @@
-# Frontend Mentor - Time tracking dashboard solution
+# Getting Started with Create React App
 
-This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of contents
+## Available Scripts
 
-- [Frontend Mentor - Time tracking dashboard solution](#frontend-mentor---time-tracking-dashboard-solution)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
+In the project directory, you can run:
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+### `npm start`
 
-## Overview
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### The challenge
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Users should be able to:
+### `npm test`
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Switch between viewing Daily, Weekly, and Monthly stats
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Screenshot
+### `npm run build`
 
-![](./screenshot.png)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Links
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- Solution URL: [[Add solution URL here](https://github.com/Charlie025x/Time-tracking-dashboard)](https://github.com/Charlie025x/Time-tracking-dashboard)
-- Live Site URL: [[Add live site URL here](https://charlie025x.github.io/Time-tracking-dashboard/)](https://charlie025x.github.io/Time-tracking-dashboard/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## My process
+### `npm run eject`
 
-### Built with
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- Javascript
-- SCSS
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### What I learned
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-I learned how to render a html template to the DOM, and filling that template with json data. This works similar to a react components.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```html
-  <template data-card-template>
-    <div data-card-category class="card">
-      <h2 data-card-title ><!-- fill w/ json data --></h2>
-      <img src="./images/icon-ellipsis.svg" alt="">
-      <p data-current-hours class="current-hours">
-        <!-- fill w/ json data -->
-      </p>
-      <p data-previous-hours class="previous-hours">
-        <!-- fill w/ json data -->
-      </p>
-    </div>
-  </template>
-```
+## Learn More
 
-### Continued development
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-I'm having trouble rerendering the cards on state change. Right now only the last card rerenders on state change.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Useful resources
+### Code Splitting
 
-- [YouTube video: Can I Create This Complex Animated Multistep Form? - Web Dev Simplified](https://youtu.be/VdqtdKXxKhM) - I learned how to use the template element with html and Javascript, and learned how to select html with "data-" selectors. Template elements work like react components, which is very useful for rendering the cards with the corresponing json data.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-## Author
+### Analyzing the Bundle Size
 
-- Website - [Charlie Alonso](https://charlie-alonso.netlify.app/)
-- GitHub - [Charlie025x](https://github.com/Charlie025x)
-- Frontend Mentor - [@Charlie025x](https://www.frontendmentor.io/profile/Charlie025x)
-- LinkedIn - [Charliealonso002](https://www.linkedin.com/in/charliealonso002/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
