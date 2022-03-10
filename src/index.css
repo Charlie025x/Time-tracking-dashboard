@@ -132,32 +132,32 @@ main {
   background-color: var(--clr-work);
   background-position: right 1rem top -0.8rem;
   background-repeat: no-repeat;
-  background-image: url(../images/icon-work.svg);
+  background-image: url(./images/icon-work.svg);
 }
 
 .play::before {
   background-color: var(--clr-play);
-  background-image: url(../images/icon-play.svg);
+  background-image: url(./images/icon-play.svg);
 }
 
 .study::before {
   background-color: var(--clr-study);
-  background-image: url(../images/icon-study.svg);
+  background-image: url(./images/icon-study.svg);
 }
 
 .exercise::before {
   background-color: var(--clr-exercise);
-  background-image: url(../images/icon-exercise.svg);
+  background-image: url(./images/icon-exercise.svg);
 }
 
 .social::before {
   background-color: var(--clr-social);
-  background-image: url(../images/icon-social.svg);
+  background-image: url(./images/icon-social.svg);
 }
 
 .self-care::before {
   background-color: var(--clr-self-care);
-  background-image: url(../images/icon-self-care.svg);
+  background-image: url(./images/icon-self-care.svg);
 }
 
 .attribution {
@@ -169,7 +169,7 @@ main {
 }
 
 @media only screen and (min-width: 992px) {
-   #root { /* was selecting body but added "#root" for react  */
+  body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -241,4 +241,4 @@ main {
     margin-top: 1rem;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=index.css.map */
