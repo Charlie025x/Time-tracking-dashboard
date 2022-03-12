@@ -169,7 +169,8 @@ main {
 }
 
 @media only screen and (min-width: 992px) {
-  body {
+  #root {
+    /* was selecting body but added "#root" for react  */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
