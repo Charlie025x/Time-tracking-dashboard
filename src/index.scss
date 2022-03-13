@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 :root {
   --clr-blue: hsl(246, 80%, 60%);
@@ -19,7 +19,7 @@
 body {
   margin: 0;
   background-color: var(--clr-very-dark-blue);
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   color: white;
 }
@@ -43,17 +43,16 @@ main {
       width: 3rem;
       border: 2px solid white;
       border-radius: 50%;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
     h1 {
       margin: 0;
       font-size: 1rem;
       font-weight: 300;
-      a {
+      span {
         display: block;
-        font-size: 1.5rem;
+        font-size: 2.2rem;
       }
-
     }
   }
   // .user-card styles
@@ -65,13 +64,14 @@ main {
   .time-frame {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; // keeps the timeframes from scretching horizontaly in desktop view thus improving the click listener 
+    align-items: flex-start; // keeps the timeframes from scretching horizontaly in desktop view thus improving the click listener
     padding: 1rem;
     color: var(--clr-desaturated-blue);
-    .active-time-frame { // toggle this with state
+    .active-time-frame {
+      // toggle this with state
       color: white;
     }
-    a:hover {
+    span:hover {
       cursor: pointer;
     }
   }
@@ -84,18 +84,21 @@ main {
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr .3fr; // .3 fr because 3 dots img doesn't need much space
+  grid-template-columns: 1fr 0.3fr; // .3 fr because 3 dots img doesn't need much space
   align-items: center;
   position: relative;
-  &:active { // change card's color on click
+  &:active {
+    // change card's color on click
     background-color: hsl(236, 42%, 35%);
     cursor: pointer;
   }
-  &:last-of-type { // last card
+  &:last-of-type {
+    // last card
     margin-bottom: 3rem;
   }
-  &::before { // card's top tab
-    content: '';
+  &::before {
+    // card's top tab
+    content: "";
     width: 100%;
     height: 5rem;
     position: absolute;
@@ -104,7 +107,7 @@ main {
     background-color: red; // color will be overridden
     border-radius: 1rem;
     // background image styling
-    background-position: right 1rem top -.8rem;
+    background-position: right 1rem top -0.8rem;
     background-repeat: no-repeat;
   }
   h2 {
@@ -116,12 +119,12 @@ main {
     justify-self: end;
     cursor: pointer;
     &:hover {
-      filter:  brightness(0) invert(1); // turns img white on hover
+      filter: brightness(0) invert(1); // turns img white on hover
     }
   }
   p {
     margin: 0;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     font-weight: 300;
   }
   .current-hours {
@@ -132,12 +135,11 @@ main {
     font-size: 1rem;
     color: var(--clr-pale-blue);
   }
-
 }
 
 .work::before {
   background-color: var(--clr-work);
-  background-position: right 1rem top -.8rem;
+  background-position: right 1rem top -0.8rem;
   background-repeat: no-repeat;
   background-image: url(./images/icon-work.svg);
 }
@@ -168,15 +170,16 @@ main {
 }
 
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 11px;
+  text-align: center;
   a {
     color: hsl(228, 45%, 44%);
   }
 }
 
-
 @media only screen and (min-width: 992px) {
-  #root { /* was selecting body but added "#root" for react  */
+  #root {
+    /* was selecting body but added "#root" for react  */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -193,7 +196,8 @@ main {
     height: 60vh;
   }
 
-  .user-card, .card {
+  .user-card,
+  .card {
     width: 100%;
   }
 
@@ -210,9 +214,9 @@ main {
         margin-bottom: 2rem;
         width: 4rem;
       }
-        h1 a {
-          font-size: 2.5rem;
-        }
+      h1 a {
+        font-size: 2.5rem;
+      }
     }
     .time-frame {
       box-sizing: border-box;
@@ -229,9 +233,10 @@ main {
     padding: 1rem;
     margin-top: 2rem; // fixes misalignment caused by card's top tab
     h2 {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
-    .current-hours, .previous-hours {
+    .current-hours,
+    .previous-hours {
       grid-column: span 2;
     }
     .current-hours {
@@ -239,13 +244,14 @@ main {
     }
     .previous-hours {
       justify-self: start;
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
-    &:last-of-type { // last card
+    &:last-of-type {
+      // last card
       margin-bottom: 0;
     }
   }
-  
+
   .attribution {
     margin-top: 1rem;
   }

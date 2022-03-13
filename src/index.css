@@ -54,9 +54,9 @@ main {
   font-size: 1rem;
   font-weight: 300;
 }
-.user-card .user-header h1 a {
+.user-card .user-header h1 span {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 .user-card .time-frame {
   display: flex;
@@ -68,7 +68,7 @@ main {
 .user-card .time-frame .active-time-frame {
   color: white;
 }
-.user-card .time-frame a:hover {
+.user-card .time-frame span:hover {
   cursor: pointer;
 }
 
@@ -187,7 +187,8 @@ main {
     height: 60vh;
   }
 
-  .user-card, .card {
+  .user-card,
+.card {
     width: 100%;
   }
 
@@ -224,7 +225,8 @@ main {
   .card h2 {
     font-size: 0.9rem;
   }
-  .card .current-hours, .card .previous-hours {
+  .card .current-hours,
+.card .previous-hours {
     grid-column: span 2;
   }
   .card .current-hours {
