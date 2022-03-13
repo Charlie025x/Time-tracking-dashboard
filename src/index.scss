@@ -47,11 +47,13 @@ main {
     }
     h1 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 300;
+      line-height: 1.5;
       span {
         display: block;
-        font-size: 2.2rem;
+        font-size: 1.2rem;
+        // font-size: 4rem;
       }
     }
   }
@@ -63,7 +65,7 @@ main {
   border-radius: 1rem;
   .time-frame {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start; // keeps the timeframes from scretching horizontaly in desktop view thus improving the click listener
     padding: 1rem;
     color: var(--clr-desaturated-blue);
@@ -84,7 +86,7 @@ main {
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 0.3fr; // .3 fr because 3 dots img doesn't need much space
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   position: relative;
   &:active {
@@ -212,10 +214,13 @@ main {
       align-items: start;
       img {
         margin-bottom: 2rem;
-        width: 4rem;
+        width: 5rem;
       }
-      h1 a {
-        font-size: 2.5rem;
+      h1 {
+        font-size: 1rem;
+        span {
+          font-size: 2.5rem;
+        }
       }
     }
     .time-frame {
@@ -232,6 +237,7 @@ main {
     height: calc(100% - 2rem);
     padding: 1rem;
     margin-top: 2rem; // fixes misalignment caused by card's top tab
+    grid-template-columns: 1fr 0.3fr; // .3 fr because 3 dots img doesn't need much space
     h2 {
       font-size: 0.9rem;
     }
