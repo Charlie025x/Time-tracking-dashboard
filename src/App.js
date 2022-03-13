@@ -1,29 +1,38 @@
-import React, { Component } from 'react'
-import Card from './components/card.comonent';
+import React, { Component } from "react";
+import Card from "./components/card.component";
 
-import userImg from './images/image-jeremy.png'
+import userImg from "./images/image-jeremy.png";
 
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
       timeFrame: "weekly",
-      cards: [],
-    }
+      cardsData: [],
+    };
   }
 
   componentDidMount() {
-    fetch('./data.json')
+    fetch("./data.json")
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) =>
+        this.setState(
+          () => {
+            return { cardsData: data };
+          },
+          () => {
+            console.log(this.state);
+          }
+        )
+      );
   }
-  
+
   render() {
     return (
       <main data-cards-container>
         <div className="user-card">
           <div className="user-header">
-            <img src={userImg} alt=""/>
+            <img src={userImg} alt="" />
             <h1>
               Report for
               <a>Jeremy Robson</a>
@@ -35,8 +44,12 @@ export default class App extends Component {
             <a>Monthly</a>
           </div>
         </div>
-      <Card/>
-    </main>
-    )
+        {/* looping through cardsData and rendering cards */}
+        {this.state.cardsData.map((cardData) => (
+          <Card key={cardData.title} cardData={cardData} />
+        ))}
+        {/* ********************************************* */}
+      </main>
+    );
   }
 }
