@@ -50,6 +50,9 @@ export default class App extends Component {
                   }
                 );
               }}
+              className={
+                this.state.timeFrame === "daily" ? "active-time-frame" : ""
+              }
             >
               Daily
             </span>
@@ -64,7 +67,9 @@ export default class App extends Component {
                   }
                 );
               }}
-              className="active-time-frame"
+              className={
+                this.state.timeFrame === "weekly" ? "active-time-frame" : ""
+              }
             >
               Weekly
             </span>
@@ -79,6 +84,9 @@ export default class App extends Component {
                   }
                 );
               }}
+              className={
+                this.state.timeFrame === "monthly" ? "active-time-frame" : ""
+              }
             >
               Monthly
             </span>
